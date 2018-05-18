@@ -11,13 +11,23 @@
 <!--DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <!--lang是什么 class后面的是干嘛用的"-->
-<!--猜想lang就是language-->
+<!--猜想lang就是language class用以指定样式表中的类-->
 <html lang="zh-CN" class="ax-vertical-centered">
 <head>
+    <!--为啥好几次规定编码格式-->
+    <!--我认为 这是规定本文件的编码 而上面的是规定的转化成的java文件的编码格式-->
 	<meta charset="UTF-8">
 	<title>图书馆管理系统</title>
+            <!--meta到底有啥用-->
+            <!--meta提供关于html文件的信息 用如何显示内容 关键词等-->
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <!--link有了href rel还有什么意义-->
+            <!--rel确定调用方式 href确定调用路径-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--绝对路径和相对路径各有什么优缺点-->
+    <!--等价与<%=request.getContextPath()%> -->
+    <!--如果发布的时候应用名更改的话 所有都要跟着变-->
+    <!--如果全使用相对路径的话 想要复制代码重用会比较复杂-->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-admin-theme.css">
@@ -40,20 +50,42 @@
 
 
 <body class="bootstrap-admin-with-small-navbar">
+<!--nav是啥标签 有啥用 role又是干啥的-->
+<!--nav是标注一个导航链接的区域 里面都是链接-->
+<!--role向浏览器表明这是一个navigator容器 不要使用普通的方法处理 就类似于rel-->
 <nav class="navbar navbar-inverse navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small" role="navigation">
+    <!--div本身是一种不明确的标签吗与普通的标签有什么区别 div嵌套有什么特色-->
+    <!--div主要是设置相对上一层的位置 对于布局效果强大-->
+    <!--这些引入的样式表可以预览吗 用什么方式预览 或者使用netbeans自带的css预览工具-->
+    <!--利用浏览器工具进行预览-->
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="collapse navbar-collapse main-navbar-collapse">
                     <a class="navbar-brand" href="${pageContext.request.contextPath}/reader.jsp"><strong>欢迎使用图书馆管理系统</strong></a>
                     <ul class="nav navbar-nav navbar-right">
+                    <!--这些判断是依附于什么实体的-->
+                    <!--我认为逻辑判断先于实体显示 比如前台某个值为0 那么就不显示为0时候的按钮-->
+                    <!--这里如果登陆名变量为0 就以第一种形式展现-->
+                    <!--否则以第二种形式展现-->
                     <s:if test="#session.reader!=null"><!-- 判断是否已经登录 -->
                         <li class="dropdown">
                             <a href="#" role="button" class="dropdown-toggle" data-hover="dropdown"> <i class="glyphicon glyphicon-user"></i>     欢迎您，<s:property value="#session.reader.name"/><i class="caret"></i></a>
                             <ul class="dropdown-menu">
+                                <!--#号是什么定位方式-->
+                                <!--我认为是当前页面的意思-->
+                                <!--查询得知#是某个锚点节点的意思-->
+                                <!--我认为这个锚点也是引入的那几个中的一个-->
+                                <!--那为什么简写呢-->
+                                <!--data-toggle是啥意思-->
+                                <!--我认为这是模糊窗的开关的意思 一开始模糊的形式显示-->
+                                <!--后来根据变量的变化改变形式-->
                                 <li><a href="#updateinfo" data-toggle="modal">个人资料</a></li>
+                                <!--role="presentation"是什么显示-->
                                  <li role="presentation" class="divider"></li>
                                 <li><a href="#updatepwd" data-toggle="modal">修改密码</a></li>
+                                <!--divider是什么意思啊-->
+                                <!--一个分隔符而已-->
                                 <li role="presentation" class="divider"></li>
                                 <li><a href="${pageContext.request.contextPath}/readerLoginAction_logout.action">退出</a></li>
                             </ul>

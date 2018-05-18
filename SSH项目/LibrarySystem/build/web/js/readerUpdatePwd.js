@@ -1,7 +1,8 @@
 
 $(function () {
 	
-	
+        //$()啥意思
+        //用来获取某个节点对象
     $('#update_readerPwd').click(function () {
 
      if (!validUpdateReaderPwd()) {
