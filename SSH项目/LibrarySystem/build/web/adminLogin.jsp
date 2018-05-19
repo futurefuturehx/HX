@@ -21,6 +21,8 @@
 </head>
 
 <style type="text/css">
+    <!--这边啥意思-->
+    <!--这边不是js 这边只是为警示框设置一下格式-->
         .alert{
             margin: 0 auto 20px;
             text-align: center;
@@ -32,15 +34,28 @@
 
 
 <body class="bootstrap-admin-without-padding">
+<!--这边div有次序吗-->
+<!--题外话 可以使用google开发者工具体验-->
+<!--row就是一行 col是一列的意思-->
+<!--div里面的总是比外面的小两边空白 主要用来布局-->
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
+            <!--这边文字位置好像不对啊-->
+            <!--对于上一层div 叉号的相对位置是确定的-->
             <div class="alert alert-info">
+                <!--这边href="#"什么意思-->
+                <!--点击这个叉号之后 就链接到本页面-->
+                
+                <!--&times啥意思-->
+                <!--特殊字符都是用&来表示 这里乘号来代替叉叉 dismiss只是功能 乘号才是显示-->
                 <a class="close" data-dismiss="alert" href="#">&times;</a>
                 欢迎登录图书馆管理系统后台
             </div>
+            <!--大框架套小框架-->
             <form class="bootstrap-admin-login-form"><!--引用大框架-->
                 <div class="form-group">
+                    <!--一个组套着label或input-->
                     <label class="firstname" for="username">账&nbsp;号</label>
                     <input type="text" class="form-control" id="username" placeholder="管理员用户名"/>
                     <label class="control-label" for="username" style="display:none;"></label>
@@ -50,6 +65,7 @@
                     <input type="password" class="form-control" id="password" placeholder="密码"/>
                     <label class="control-label" for="username" style="display:none;"></label>
                 </div>
+                <!--button包含在大框架中 但是不属于组-->
                 <input type="button" class="btn btn-lg btn-primary" id="login_submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;录"/>
             </form>
         </div>

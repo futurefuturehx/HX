@@ -144,7 +144,7 @@ public final class reader_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<nav class=\"navbar navbar-inverse navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small\" role=\"navigation\">\n");
       out.write("    <!--div本身是一种不明确的标签吗与普通的标签有什么区别 div嵌套有什么特色-->\n");
       out.write("    <!--div主要是设置相对上一层的位置 对于布局效果强大-->\n");
-      out.write("    <!--这些引入的样式表可以预览吗 用什么方式预览-->\n");
+      out.write("    <!--这些引入的样式表可以预览吗 用什么方式预览 或者使用netbeans自带的css预览工具-->\n");
       out.write("    <!--利用浏览器工具进行预览-->\n");
       out.write("    <div class=\"container\">\n");
       out.write("        <div class=\"row\">\n");
@@ -154,6 +154,10 @@ public final class reader_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/reader.jsp\"><strong>欢迎使用图书馆管理系统</strong></a>\n");
       out.write("                    <ul class=\"nav navbar-nav navbar-right\">\n");
+      out.write("                    <!--这些判断是依附于什么实体的-->\n");
+      out.write("                    <!--我认为逻辑判断先于实体显示 比如前台某个值为0 那么就不显示为0时候的按钮-->\n");
+      out.write("                    <!--这里如果登陆名变量为0 就以第一种形式展现-->\n");
+      out.write("                    <!--否则以第二种形式展现-->\n");
       out.write("                    ");
       if (_jspx_meth_s_if_0(_jspx_page_context))
         return;
@@ -180,6 +184,10 @@ public final class reader_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/bookAction_findBookByPage.action\"><i class=\"glyphicon glyphicon-chevron-right\"></i> 图书查询</a>\n");
       out.write("                </li>\n");
+      out.write("                <!--这个session放在哪里啊-->\n");
+      out.write("                <!--题外话 如何在整个文件夹里面找某个单词啊-->\n");
+      out.write("                <!--使用visual code的搜索功能 注意行定位-->\n");
+      out.write("                <!--搜索得知该变量定义在后面呢-->\n");
       out.write("                ");
       if (_jspx_meth_s_if_1(_jspx_page_context))
         return;
@@ -320,6 +328,8 @@ public final class reader_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<div class=\"form-group\">\n");
       out.write("\t\t\t\t\t\t\t\t<label for=\"firstname\" class=\"col-sm-3 control-label\">真实姓名</label>\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-7\">\n");
+      out.write("                                                                    <!--s:property这个前缀有什么用 为啥外面写一个value 里面写一个value-->\n");
+      out.write("                                                                    \n");
       out.write("\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"name\"  placeholder=\"请输入您的真实姓名\" value='");
       if (_jspx_meth_s_property_1(_jspx_page_context))
         return;
@@ -431,9 +441,20 @@ public final class reader_jsp extends org.apache.jasper.runtime.HttpJspBase
           return true;
         out.write("<i class=\"caret\"></i></a>\n");
         out.write("                            <ul class=\"dropdown-menu\">\n");
+        out.write("                                <!--#号是什么定位方式-->\n");
+        out.write("                                <!--我认为是当前页面的意思-->\n");
+        out.write("                                <!--查询得知#是某个锚点节点的意思-->\n");
+        out.write("                                <!--我认为这个锚点也是引入的那几个中的一个-->\n");
+        out.write("                                <!--那为什么简写呢-->\n");
+        out.write("                                <!--data-toggle是啥意思-->\n");
+        out.write("                                <!--我认为这是模糊窗的开关的意思 一开始模糊的形式显示-->\n");
+        out.write("                                <!--后来根据变量的变化改变形式-->\n");
         out.write("                                <li><a href=\"#updateinfo\" data-toggle=\"modal\">个人资料</a></li>\n");
+        out.write("                                <!--role=\"presentation\"是什么显示-->\n");
         out.write("                                 <li role=\"presentation\" class=\"divider\"></li>\n");
         out.write("                                <li><a href=\"#updatepwd\" data-toggle=\"modal\">修改密码</a></li>\n");
+        out.write("                                <!--divider是什么意思啊-->\n");
+        out.write("                                <!--一个分隔符而已-->\n");
         out.write("                                <li role=\"presentation\" class=\"divider\"></li>\n");
         out.write("                                <li><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));

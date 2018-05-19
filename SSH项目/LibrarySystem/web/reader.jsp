@@ -110,6 +110,18 @@
                 <li>
                     <a href="${pageContext.request.contextPath}/bookAction_findBookByPage.action"><i class="glyphicon glyphicon-chevron-right"></i> 图书查询</a>
                 </li>
+                <!--这个session放在哪里啊-->
+                <!--题外话 如何在整个文件夹里面找某个单词啊-->
+                <!--使用visual code的搜索功能 注意行定位-->
+                <!--搜索得知该变量定义在后面呢-->
+                <!--jsp里面的session就是servlet中的session-->
+                <!--jsp文件最后还是会翻译成servlet-->
+                <!--可以通过visual code查看翻译之后的servlet-->
+                <!--查看翻译就是session = pageContext.getSession();-->
+                
+                <!--servlet到底是什么 是不是所有web应用都要servlet-->
+                <!--servlet只是一个接口规范 让你必须回答 初始化时要做什么 销毁时做什么 接受请求时做什么 然后具体实现-->
+                <!--tomcat才是真正与客户端打交道的 根据url确定对应的servlet-->
                 <s:if test="#session.reader!=null"><!-- 判断是否登录 -->
 	                <li>
 	                    <a href="${pageContext.request.contextPath}/reader/borrowAction_findMyBorrowInfoByPage.action"><i class="glyphicon glyphicon-chevron-right"></i> 借阅信息</a>
@@ -282,6 +294,8 @@
 							<div class="form-group">
 								<label for="firstname" class="col-sm-3 control-label">真实姓名</label>
 								<div class="col-sm-7">
+                                                                    <!--s:property这个前缀有什么用 为啥外面写一个value 里面写一个value-->
+                                                                    
 									<input type="text" class="form-control" id="name"  placeholder="请输入您的真实姓名" value='<s:property value="#session.reader.name"/>'>
 										<label class="control-label" for="name" style="display: none"></label>			
 								</div>
