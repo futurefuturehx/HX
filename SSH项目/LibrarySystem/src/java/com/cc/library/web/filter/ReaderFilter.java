@@ -14,7 +14,9 @@ import javax.servlet.http.HttpSession;
 
 import com.cc.library.domain.Reader;
 
-
+//这个类哪里被使用了 dofilter的具体实现又在哪里
+//好像只在web.xml中出现
+//那么web.xml文件中如何配置使用filter的
 public class ReaderFilter implements Filter{
 
 	@Override

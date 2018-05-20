@@ -40,14 +40,18 @@
 	  <filter-name>AdminFilter</filter-name>
 	  <url-pattern>/admin/*</url-pattern>
 	</filter-mapping>
-	
-	<!-- 读者权限的过滤 -->
+	<!--这边给过滤文件一个缩略名干啥呢 用来调用?-->
+        <!--web.xml是用来配置欢迎页 servlet filter的,web中指定了欢迎页 就不会默认index了-->
+        <!--filter只有在web.xml下配置才能生效-->
+	<!--读者过滤-->
  	 <filter>
 		  <display-name>ReaderFilter</display-name>
 		  <filter-name>ReaderFilter</filter-name>
 		  <filter-class>com.cc.library.web.filter.ReaderFilter</filter-class>
 	</filter>
-
+        <!--filtermapping与filter的区别是啥-->
+        <!--filter配置如何过滤 filtermapping配置在什么规则下使用该过滤-->
+        <!--这边规则是用的url通配符匹配所有包含reader的页面-->
 	<filter-mapping>
 	  <filter-name>ReaderFilter</filter-name>
 	  <url-pattern>/reader/*</url-pattern>
@@ -68,6 +72,8 @@
   
   
  <!-- 配置struts2的过滤器 -->
+ <!--难不成structs也是个特殊的过滤器？-->
+<!--它实现了Filter接口 在规则里调用它里面的init()初始化几个重要的类 比如Dispatcher-->
   <filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
