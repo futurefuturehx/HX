@@ -71,7 +71,19 @@
         </div>
     </div>
 </div>
+            <!--dismiss="modal"啥意思-->
+            <!--modal是模态框的意思-->
+            <!--在不离开当前页面的情况下 提供一个来自单独源的内容 也就是一个弹出框"-->
 <div class="modal fade" id="modal_info" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <!--这么多的modal部分啥意思 有啥层次关系-->
+    <!--前面几个大框架是必须的-->
+    <!--modal-header是标题的内容的显示-->
+    <!--modal-body是主要内容-->
+    <!--modal-foot是按键内容-->
+    
+    <!--模糊框出发条件在哪里 触发源在哪里-->
+    <!--账号不正确且点击登录之后出现-->
+    <!--应该在登录按钮-->
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -83,6 +95,7 @@
                     <div class="col-lg-12" id="div_info"></div>
                 </div>
             </div>
+  
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" id="btn_info_close" data-dismiss="modal">关闭</button>
             </div>

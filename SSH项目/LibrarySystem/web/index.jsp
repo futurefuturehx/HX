@@ -1,4 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<!--??basePath???? ????-->
+<!--path????????-->
+<!--basepath??http://localhost:8080/WebName/ -->
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -11,7 +14,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    
-
 		<%
 			response.sendRedirect("reader.jsp");
 		 %>
