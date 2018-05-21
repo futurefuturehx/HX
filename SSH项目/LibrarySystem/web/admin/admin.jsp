@@ -143,6 +143,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
+                        <!--panel与其他组件的差别 主要是用来干啥的-->
+                        <!--panel就是面板-->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="text-muted bootstrap-admin-box-title">图书借阅</div>
