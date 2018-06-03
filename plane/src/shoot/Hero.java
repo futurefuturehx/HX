@@ -37,7 +37,7 @@ public class Hero extends Flyer {
 
     /**
      * 实现英雄机的动画效果的方法
-     * 让英雄机的图片在hero0和hero1之斗切换
+     * 让英雄机的图片在hero0和hero1之间切换
      */
     @Override
     public void step() {
