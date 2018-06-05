@@ -391,6 +391,7 @@ public class ShootGame extends JPanel {
                 index++;
             }
         }
+
         if(hero.getLife() <= 0){ //如果英雄机生命值小于等于0，游戏结束
             state = GAME_OVER;
         }
